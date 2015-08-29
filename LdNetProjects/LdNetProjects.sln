@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Log(日志系统)", "Log(日志系统)", "{E93B3CA0-8927-411A-BC81-C140CB14FCA4}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LdNet.Web", "LdNet.Web\LdNet.Web.csproj", "{8C01B255-546E-49CE-A965-3F6923E45414}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LdNet.Web.Tests", "LdNet.Web.Tests\LdNet.Web.Tests.csproj", "{ACADD25D-0106-469D-9C70-B8EC2C8B0330}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{655014D7-A89D-41C6-8923-65795F9B67BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{ACADD25D-0106-469D-9C70-B8EC2C8B0330}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACADD25D-0106-469D-9C70-B8EC2C8B0330}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACADD25D-0106-469D-9C70-B8EC2C8B0330}.Release|Any CPU.Build.0 = Release|Any CPU
+		{655014D7-A89D-41C6-8923-65795F9B67BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{655014D7-A89D-41C6-8923-65795F9B67BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{655014D7-A89D-41C6-8923-65795F9B67BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{655014D7-A89D-41C6-8923-65795F9B67BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
