@@ -30,14 +30,21 @@ namespace LdNet.Log
 
         static LogFactory()
         {
-            var path=string.Concat(AppDomain.CurrentDomain.BaseDirectory,"Config");
-            if (!Directory.Exists(path))
+            try
             {
-                Directory.CreateDirectory(path);
-            }
+                var path = string.Concat(AppDomain.CurrentDomain.BaseDirectory, "Config\\");
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
 
-            FileInfo configFile = new FileInfo(path + @"Log.config");
-            log4net.Config.XmlConfigurator.Configure(configFile);
+                FileInfo configFile = new FileInfo(path + @"Log.config");
+                log4net.Config.XmlConfigurator.Configure(configFile);
+            }
+            catch (Exception er)
+            {
+ 
+            }
         }
 
 

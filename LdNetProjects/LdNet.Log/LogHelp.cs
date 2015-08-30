@@ -114,6 +114,9 @@ namespace LdNet.Log
         {
             LogHelp log = LogFactory.GetLogger(typeof(LogHelp));
             log.Error(e.Message + e.StackTrace);
+            log.Debug(e.Message + e.StackTrace);
+            log.Info(e.Message + e.StackTrace);
+            log.Warming(e.Message + e.StackTrace);
         }
 
         #endregion
