@@ -12,21 +12,26 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
-            try
+            for (int j = 0; j < 5; j++)
             {
-                string test = "123tr";
-                int i = int.Parse(test);//制造一个异常
-            }
-            catch (Exception e)
-            {
-                LogHelp log = new LogHelp();
-                log.Debug(e);
-                //log.Debug("错误",e);
-                log.Warming(e);
-                log.Error(e);
-                log.Info("info............");
-                //log.Info("info............",e);
-                   
+
+
+                try
+                {
+                    string test = "123tr";
+                    int i = int.Parse(test);//制造一个异常
+                }
+                catch (Exception e)
+                {
+                    LogHelp log = new LogHelp("abc");
+                    log.Debug(e);
+                    //log.Debug("错误",e);
+                    log.Warming(e);
+                    log.Error(e);
+                    log.Info("info............");
+                    //log.Info("info............",e);
+
+                }
             }
             Console.Read();
         }

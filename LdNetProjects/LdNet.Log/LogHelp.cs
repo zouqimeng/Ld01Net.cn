@@ -42,10 +42,15 @@ namespace LdNet.Log
         //<summary>
         //LogHelp的构造函数
         //</summary>
-        public LogHelp()
+        public LogHelp(Type type)
         {
-           // this.logger = LogManager.GetLogger(typeof(LogHelp));
-            this.logger = LogManager.GetLogger("LogHelp");
+            this.logger = LogManager.GetLogger(type.Name);
+            // this.logger = LogManager.GetLogger("LogHelp");
+        }
+        public LogHelp(string str)
+        {
+            this.logger = LogManager.GetLogger(str);
+            // this.logger = LogManager.GetLogger("LogHelp");
         }
 
 
