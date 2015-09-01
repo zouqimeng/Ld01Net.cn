@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>dotTrace.Performance.Remote</id>
+    <version>5.5.0</version>
+    <authors>Maarten Balliauw</authors>
+    <owners>Maarten Balliauw</owners>
+    <iconUrl>http://www.jetbrains.com/img/icons/DT_big.gif</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>dotTrace Performance helps detect performance bottlenecks in a variety of .NET Framework applications.</description>
+    <summary>dotTrace Performance helps detect performance bottlenecksin a variety of .NET Framework applications.</summary>
+    <language>en-US</language>
+    <tags>dottrace jetbrains remote profiling profiler performance memory</tags>
+  </metadata>
+</package>

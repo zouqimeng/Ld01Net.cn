@@ -19,8 +19,16 @@ namespace TestConsole
             }
             catch (Exception e)
             {
-                LogHelp.RecordException(e);
+                LogHelp log = new LogHelp();
+                log.Debug(e);
+                //log.Debug("错误",e);
+                log.Warming(e);
+                log.Error(e);
+                log.Info("info............");
+                //log.Info("info............",e);
+                   
             }
+            Console.Read();
         }
     }
 }

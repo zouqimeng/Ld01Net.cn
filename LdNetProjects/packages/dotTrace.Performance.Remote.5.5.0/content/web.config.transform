@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<configuration>
+  <system.web>
+    <anonymousIdentification enabled="true" />
+  </system.web>
+  <location path="Authenticate.aspx">
+    <system.web>
+      <authorization>
+        <deny users="?"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="AgentService.asmx">
+    <system.web>
+      <authorization>
+        <allow users="?"/>
+      </authorization>
+    </system.web>
+  </location>
+</configuration>

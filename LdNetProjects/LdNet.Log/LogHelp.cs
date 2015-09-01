@@ -14,6 +14,7 @@
 #region zh-CN 命名空间引用 | en-US USING NAMESPACE
 using log4net;
 using System;
+using System.IO;
 #endregion
 
 namespace LdNet.Log
@@ -25,8 +26,6 @@ namespace LdNet.Log
     {
         #region zh-CN 字段 | en-US Fields
 
-        #region zh-CN 动态字段 | en-US Dynamic Fields
-
         #region zh-CN 动态私有字段 | en-US Dynamic Private Fields
 
         private ILog logger;
@@ -35,23 +34,31 @@ namespace LdNet.Log
 
         #endregion
 
-        #endregion
 
         #region zh-CN 构造函数 | en-US Constructor
 
-        #region zh-CN 动态构造函数 | en-US Dynamic Constructor
-
         #region zh-CN 动态公开构造函数 | en-US Dynamic Public Constructor
 
-        /// <summary>
-        /// LogHelp的构造函数
-        /// </summary>
-        public LogHelp(ILog log)
+        //<summary>
+        //LogHelp的构造函数
+        //</summary>
+        public LogHelp()
         {
-            this.logger = log;
+           // this.logger = LogManager.GetLogger(typeof(LogHelp));
+            this.logger = LogManager.GetLogger("LogHelp");
         }
 
+
         #endregion
+
+        #region zh-CN 静态构造函数 | en-US Static Constructor
+
+        static LogHelp()
+        {
+            var fileConfig = string.Concat(AppDomain.CurrentDomain.BaseDirectory, @"Log.config");
+            FileInfo configFile = new FileInfo(fileConfig);
+            log4net.Config.XmlConfigurator.Configure(configFile);
+        }
 
         #endregion
 
@@ -60,7 +67,6 @@ namespace LdNet.Log
         #region zh-CN 方法 | en-US Methods
 
         #region zh-CN 动态方法 | en-US Dynamic Methods
-
 
         #region zh-CN 动态公开方法 | en-US Dynamic Public Methods
 
@@ -104,23 +110,19 @@ namespace LdNet.Log
             this.logger.Info(message, e);
         }
 
-        #endregion
-
-        #endregion
-
-        #region zh-CN 静态公开方法 | en-US Static Public Methods
-
-        public static void RecordException(Exception e)
+        public void Fatal(object message)
         {
-            LogHelp log = LogFactory.GetLogger(typeof(LogHelp));
-            log.Error(e.Message + e.StackTrace);
-            log.Debug(e.Message + e.StackTrace);
-            log.Info(e.Message + e.StackTrace);
-            log.Warming(e.Message + e.StackTrace);
+            this.logger.Fatal(message);
+        }
+
+        public void Fatal(object message, Exception e)
+        {
+            this.logger.Fatal(message, e);
         }
 
         #endregion
-       
+
+        #endregion
 
         #endregion
     }
