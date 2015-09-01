@@ -45,12 +45,10 @@ namespace LdNet.Log
         public LogHelp(Type type)
         {
             this.logger = LogManager.GetLogger(type.Name);
-            // this.logger = LogManager.GetLogger("LogHelp");
         }
-        public LogHelp(string str)
+        public LogHelp(string type)
         {
-            this.logger = LogManager.GetLogger(str);
-            // this.logger = LogManager.GetLogger("LogHelp");
+            this.logger = LogManager.GetLogger(type);
         }
 
 
